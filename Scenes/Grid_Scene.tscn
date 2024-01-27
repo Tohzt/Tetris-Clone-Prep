@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://be4d8divcsb6s"]
+
+[ext_resource type="Script" path="res://Scripts/Grid_Script.gd" id="1_6fcoc"]
+[ext_resource type="Texture2D" uid="uid://3q3qkd6l5dm7" path="res://Assets/Backgrounds/Grid_Temp.png" id="1_m2c3d"]
+
+[sub_resource type="Gradient" id="Gradient_kufmr"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l63rb"]
+gradient = SubResource("Gradient_kufmr")
+
+[node name="GridScene" type="Node2D"]
+position = Vector2(88, 24)
+script = ExtResource("1_6fcoc")
+
+[node name="Blackdrop" type="TextureRect" parent="."]
+offset_left = -88.0
+offset_top = -24.0
+offset_right = 168.0
+offset_bottom = 200.0
+size_flags_vertical = 3
+texture = SubResource("GradientTexture1D_l63rb")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_m2c3d")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(0, 0, 0, 160, 80, 160, 80, 0, 88, 0, 88, 168, -8, 168, -8, 0)
+
+[node name="Blocks" type="Node2D" parent="."]

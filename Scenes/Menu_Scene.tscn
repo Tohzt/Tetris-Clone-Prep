@@ -4,11 +4,11 @@
 [ext_resource type="Script" path="res://Scripts/Menu_Script.gd" id="1_wqasc"]
 [ext_resource type="Texture2D" uid="uid://d7eorxgms7y4" path="res://Assets/Backgrounds/Bgr_Intro.png" id="3_5mnxu"]
 
-[sub_resource type="Gradient" id="Gradient_kufmr"]
+[sub_resource type="Gradient" id="Gradient_37dgw"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_1uks5"]
-gradient = SubResource("Gradient_kufmr")
+gradient = SubResource("Gradient_37dgw")
 
 [node name="MenuScene" type="CanvasLayer"]
 script = ExtResource("1_wqasc")
