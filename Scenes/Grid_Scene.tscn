@@ -27,9 +27,9 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_m2c3d")
 
+[node name="Blocks" type="Node2D" parent="."]
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PackedVector2Array(0, 0, 0, 160, 80, 160, 80, 0, 88, 0, 88, 168, -8, 168, -8, 0)
-
-[node name="Blocks" type="Node2D" parent="."]
+polygon = PackedVector2Array(0, 0, 0, 160, 80, 160, 80, 0, 96, 0, 96, 184, -16, 184, -16, 0)
