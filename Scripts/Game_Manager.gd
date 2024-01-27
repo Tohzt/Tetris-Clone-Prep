@@ -12,9 +12,13 @@ func _ready():
 	pass
 
 func _process(_delta):
-	if grid_scene:
-		print(grid_scene)
 	pass
 
+func _unhandled_input(_event):
+	if Input.is_action_just_pressed("DOWN"):
+		drop_blocks()
+
 func drop_blocks():
-	pass
+	var blocks = get_tree().get_nodes_in_group("Block")
+	for block in blocks:
+		block.drop()
