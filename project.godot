@@ -13,6 +13,7 @@ config_version=5
 config/name="Tetris Clone Prep"
 run/main_scene="res://Scenes/Menu_Scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+run/max_fps=30
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
@@ -24,6 +25,9 @@ GameManager="*res://Scripts/Game_Manager.gd"
 
 window/size/viewport_width=256
 window/size/viewport_height=224
+window/size/always_on_top=true
+window/size/window_width_override=768
+window/size/window_height_override=672
 window/stretch/mode="viewport"
 
 [input]
