@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="Tetris Clone Prep"
+run/main_scene="res://Scenes/Menu_Scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=256
-window/size/viewport_height=240
+window/size/viewport_height=224
 window/stretch/mode="viewport"
 
 [input]

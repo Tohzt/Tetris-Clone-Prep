@@ -1,3 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706333799
+::res://::1706335874
 icon.svg::CompressedTexture2D::3153782800837585681::1706333794::1706333800::1::::<><>::
+::res://Assets/::1706335802
+::res://Assets/Backgrounds/::1706335859
+Bgr_Game.png::CompressedTexture2D::1118174122048401198::1706335850::1706335851::1::::<><>::
+Bgr_Intro.png::CompressedTexture2D::276895416846592285::1706335846::1706335846::1::::<><>::
+Bgr_Menu.png::CompressedTexture2D::7287085570768706051::1706335839::1706335840::1::::<><>::
+Bgr_Pause.png::CompressedTexture2D::820936664353278344::1706335834::1706335834::1::::<><>::
+Bgr_Temp.png::CompressedTexture2D::6614175231085359343::1706335859::1706335859::1::::<><>::
+::res://Assets/Tetrominos/::1706335796
+::res://Scenes/::1706335874

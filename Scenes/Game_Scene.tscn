@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://di51lrqtn1y6t"]
+
+[ext_resource type="Texture2D" uid="uid://c1h7q8wykvax0" path="res://Assets/Backgrounds/Bgr_Temp.png" id="1_gr2cf"]
+
+[node name="GameScene" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameBoard" type="TextureRect" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("1_gr2cf")
