@@ -1,3 +1,5 @@
 res://Scenes/Menu_Scene.tscn
 res://Scripts/Menu_Script.gd
 res://Scenes/Game_Scene.tscn
+res://Scripts/Game_Manager.gd
+res://Scripts/Game_Script.gd
