@@ -13,5 +13,5 @@ func _unhandled_input(_event):
 		$Blocks.add_child(block)
 
 func _drop_blocks():
-	GameManager.drop_blocks(Vector2.DOWN)
-	GameManager.update_grid()
+	GameManager.drop_blocks()
+	GameManager.update_grid( )

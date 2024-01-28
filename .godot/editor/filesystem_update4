@@ -4,3 +4,4 @@ res://Scenes/Block_Scene.tscn
 res://Scenes/Grid_Scene.tscn
 res://Scripts/Block_Script.gd
 res://Scripts/Game_Manager.gd
+res://Scripts/Grid_Script.gd

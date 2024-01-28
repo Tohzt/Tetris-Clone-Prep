@@ -8,7 +8,6 @@ position = Vector2(88, 24)
 script = ExtResource("1_6fcoc")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_m2c3d")

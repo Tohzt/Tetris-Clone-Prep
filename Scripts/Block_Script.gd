@@ -4,24 +4,24 @@ class_name  BlockClass
 var is_stuck := false
 var prev_pos := Vector2.ZERO
 
-func _ready():
-	pass
+func move(dir: Vector2):
+	if is_stuck: return
+	position += dir
 
-func _process(_delta):
-	pass
-
-func drop(dir: Vector2):
-	prev_pos = position
+func drop():
 	if !is_stuck:
-		position += dir
-
+		if GameManager.collision_check(position):
+			is_stuck = true
+			GameManager.check_lines()
+			return
+		position.y += 8
+		#prev_pos = position
+		#position += dir
+		
 # TODO: Replace with collision prediction
 # If collision is found, tell all other falling blocks to get stuck
 func _on_area_2d_area_entered(_area):
+	return
 	position = prev_pos
 	is_stuck = true
-	GameManager.check_lanes()
-	#if !is_stuck:
-		#if position.y > prev_pos.y:
-			#is_stuck = true
-		#position = prev_pos
+	GameManager.check_lines()
