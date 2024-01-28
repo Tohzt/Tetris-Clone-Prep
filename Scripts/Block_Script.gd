@@ -15,8 +15,13 @@ func drop(dir: Vector2):
 	if !is_stuck:
 		position += dir
 
+# TODO: Replace with collision prediction
+# If collision is found, tell all other falling blocks to get stuck
 func _on_area_2d_area_entered(_area):
-	if !is_stuck:
-		if position.y > prev_pos.y:
-			is_stuck = true
-		position = prev_pos
+	position = prev_pos
+	is_stuck = true
+	GameManager.check_lanes()
+	#if !is_stuck:
+		#if position.y > prev_pos.y:
+			#is_stuck = true
+		#position = prev_pos

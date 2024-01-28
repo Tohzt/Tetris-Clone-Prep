@@ -10,7 +10,6 @@ var grid_data : Array
 
 func _ready():
 	_clear_grid()
-	_print_grid()
 
 func _process(_delta):
 	pass
@@ -33,8 +32,29 @@ func update_grid():
 		if block.is_stuck:
 			grid_data[block_pos.y][block_pos.x] = 1
 		else:
-			grid_data[block_pos.y][block_pos.x] = 2
+			grid_data[block_pos.y][block_pos.x] = -1
 	_print_grid()
+
+func check_lanes():
+	update_grid()
+	var lanes = []
+	for row in grid_height:
+		var row_count = 0
+		for col in grid_width:
+			if grid_data[row][col] > 0:
+				row_count += 1
+		if row_count == grid_width:
+			lanes.append(row)
+	_clear_lanes(lanes)
+
+func _clear_lanes(lanes: Array) -> void:
+	if !lanes: return
+	
+	for block in get_tree().get_nodes_in_group("Block"):
+		if block.position.y / cell_size == lanes[0]:
+			block.queue_free()
+	
+	update_grid()
 
 func _clear_grid():
 	grid_data = []
