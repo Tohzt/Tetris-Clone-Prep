@@ -4,12 +4,14 @@ extends Node2D
 @onready var offset = position
 
 func _ready():
+	$Timer.start()
 	GameManager.grid_scene = self
-	
-func _process(_delta):
-	pass
 
 func _unhandled_input(_event):
-	if Input.is_action_just_pressed("START"):
+	if Input.is_action_just_pressed("SPACE"):
 		var block = blocks.instantiate()
 		$Blocks.add_child(block)
+
+func _drop_blocks():
+	GameManager.drop_blocks(Vector2.DOWN)
+	GameManager.update_grid()
