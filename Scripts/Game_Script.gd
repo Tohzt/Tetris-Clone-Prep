@@ -1,10 +1,9 @@
 extends Node2D
 
-@onready var pause_screen = $Background/CenterContainer/PauseScreen
+@onready var pause_screen = $CenterContainer/PauseScreen
 const menu_scene = "res://Scenes/Menu_Scene.tscn"
 
 func _ready():
-	GameManager.grid_scene = self
 	pause_screen.visible = false
 
 func _process(_delta):

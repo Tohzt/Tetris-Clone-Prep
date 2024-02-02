@@ -25,7 +25,6 @@ GameManager="*res://Scripts/Game_Manager.gd"
 
 window/size/viewport_width=256
 window/size/viewport_height=224
-window/size/always_on_top=true
 window/size/window_width_override=768
 window/size/window_height_override=672
 window/stretch/mode="viewport"
@@ -70,6 +69,11 @@ LEFT={
 RIGHT={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"echo":false,"script":null)
+]
+}
+SPACE={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
 ]
 }
 

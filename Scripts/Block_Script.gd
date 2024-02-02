@@ -1,22 +1,22 @@
 extends Node2D
+class_name  BlockClass
 
 var is_stuck := false
 var prev_pos := Vector2.ZERO
 
-func _ready():
-	pass
+func move(dir: Vector2):
+	if is_stuck: return
+	position += dir
 
-func _process(_delta):
-	pass
-
-func drop(dir: Vector2):
-	prev_pos = position
+func drop():
 	if !is_stuck:
-		position += dir
+		if GameManager.collision_check(position):
+			_stick_all()
+			#is_stuck = true
+			GameManager.grid.check_lines()
+			return
+		position.y += 8
 
-func _on_area_2d_area_entered(_area):
-	if !is_stuck:
-		if position.y > prev_pos.y:
-			is_stuck = true
-			GameManager.update_grid(prev_pos)
-		position = prev_pos
+func _stick_all():
+	for block in get_tree().get_nodes_in_group("Block"):
+		block.is_stuck = true
