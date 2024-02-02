@@ -7,7 +7,16 @@ var cell_size := 8
 var grid : Grid
 
 var drop_cd = 0
-var drop_cd_dur = 0.5#1
+var drop_cd_dur = 0.25#1
+
+var seven_bag := []
+
+func _ready():
+	_fill_bag()
+
+func _fill_bag():
+	seven_bag = ["I", "J", "L", "O", "S", "T", "Z"]
+	seven_bag.shuffle()
 
 func _process(delta):
 	if grid: 
@@ -30,7 +39,9 @@ func _unhandled_input(_event):
 
 func _spawn_tetromino() -> void:
 	drop_cd = drop_cd_dur
-	var tetromino = Tetrominos.Shape["O"]
+	if seven_bag.size() == 0:
+		_fill_bag()
+	var tetromino = Tetrominos.Shape[seven_bag.pop_back()]
 	#print(tetromino)
 	for col in tetromino.size():
 		for row in tetromino[col].size():
