@@ -11,17 +11,12 @@ func move(dir: Vector2):
 func drop():
 	if !is_stuck:
 		if GameManager.collision_check(position):
-			is_stuck = true
-			GameManager.check_lines()
+			_stick_all()
+			#is_stuck = true
+			GameManager.grid.check_lines()
 			return
 		position.y += 8
-		#prev_pos = position
-		#position += dir
-		
-# TODO: Replace with collision prediction
-# If collision is found, tell all other falling blocks to get stuck
-func _on_area_2d_area_entered(_area):
-	return
-	position = prev_pos
-	is_stuck = true
-	GameManager.check_lines()
+
+func _stick_all():
+	for block in get_tree().get_nodes_in_group("Block"):
+		block.is_stuck = true

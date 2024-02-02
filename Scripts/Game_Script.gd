@@ -4,7 +4,6 @@ extends Node2D
 const menu_scene = "res://Scenes/Menu_Scene.tscn"
 
 func _ready():
-	GameManager.grid_scene = self
 	pause_screen.visible = false
 
 func _process(_delta):
