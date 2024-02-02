@@ -1,7 +1,9 @@
-res://Scenes/Grid_Scene.tscn
-res://Scripts/Game_Manager.gd
-res://Scripts/Grid_Script.gd
-res://Scenes/Game_Scene.tscn
 res://Scenes/Menu_Scene.tscn
+res://Scenes/Game_Scene.tscn
 res://Scenes/Block_Scene.tscn
+res://Scenes/Grid_Scene.tscn
+res://Scripts/Grid_Script.gd
+res://Scripts/Game_Manager.gd
+res://Scripts/Game_Script.gd
 res://Scripts/Block_Script.gd
+res://Data/tetrominos.gd

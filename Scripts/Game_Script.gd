@@ -6,9 +6,6 @@ const menu_scene = "res://Scenes/Menu_Scene.tscn"
 func _ready():
 	pause_screen.visible = false
 
-func _process(_delta):
-	pass
-
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("START"):
 		_pause_game()

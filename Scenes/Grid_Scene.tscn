@@ -18,9 +18,3 @@ texture = ExtResource("1_m2c3d")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(0, 0, 0, 160, 80, 160, 80, 0, 96, 0, 96, 184, -16, 184, -16, 0)
-
-[node name="Timer" type="Timer" parent="."]
-process_callback = 0
-wait_time = 0.5
-
-[connection signal="timeout" from="Timer" to="." method="_drop_blocks"]
